@@ -20,12 +20,21 @@
 ### commit işlemi
 - git commit -m 'do commit process'
 - git commit -m "Burası commit başlığımız" -m "Burası içeriğimizin ilk satırı" -m "Burası içeriğimizin ikinci satırı." -m "Bu da son olsun bari"
+### branch listeleme
+- git branch
+- git branch --all
 ### branch oluşturma
 - git branch new-branch
 ### branch'e geçiş yapmak
 - git checkout new-branch
 ### branch oluşturup aynı zamanda o branch'e geçiş yapmak
 - git checkout -b new-branch
+### branch silmek
+- git branch -d silinecek_branch
+- git branch --delete silinecek_branch
+- git branch -D silinecek_silinecek_branch
+### branch merge işlemi
+- git checkout master && git merge feature_branch
 ### logları görüntülemek
 - git log --oneline
 - git log --author="John"
