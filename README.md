@@ -31,10 +31,15 @@
 - git checkout -b new-branch
 ### branch silmek
 - git branch -d silinecek_branch
-- git branch --delete silinecek_branch
-- git branch -D silinecek_silinecek_branch
+- git branch --delete silinecek_branch => -d ve --delete aynıdır. merge işlemini yapmadıysanız uyarı alırsınız. merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. bir sonraki işlem bunun için.
+- git branch -D silinecek_silinecek_branch => büyük D, silmeye zorlar (force). yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolup gider.
 ### branch merge işlemi
 - git checkout master && git merge feature_branch
+### git reset işlemi
+- git log --oneline => commit hash'ini almak için 
+- git reset --soft commit_hash => --soft parametresi yaptığınız değişiklikleri korur ve staged halde tutar. commit mesajını yanlış yazdıysanız bu işlemi uyguladıktan sonra commit mesajınızı yeniden yazıp commit edebilirsiniz.
+- git reset --mixed commit_hash => --mixed parametresi ile yaptığımız commit'i geri alırız ve yaptığımız değişiklikler staged edilmemiş olarak gelir. yani "git add file_name.txt" komutuyla staged edip commit etmemiz gerekir. 
+- git reset --hard commit_hash => --hard parametresiyle çalıştırırsanız yaptığınız tüm değişiklikleri silerek belirtilen commit'e gidersiniz. zamanda yolculuk yaptırır. kullanması tehlikelidir çünkü yaptığınız önemli bir şey varsa boşa gider. kullanırken DİKKATLİ OLUNUZ. 
 ### logları görüntülemek
 - git log --oneline
 - git log --author="John"
