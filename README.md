@@ -78,6 +78,11 @@
     <details>
     belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirdik. 
     </details>
+### alias ekleme
+- git config --global alias.last 'log -1 HEAD'
+    <details>
+    "git last" komutu bundan sonra "git log -1 HEAD" görevini yerine getirecek. "git last" bize son commitin ayrıntılarını verecektir. 
+    </details>
 ### logları görüntülemek
 - git log --oneline
 - git log --author="John"
