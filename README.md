@@ -41,7 +41,7 @@
     </details>
 ### branch merge işlemi
 - git checkout master && git merge feature_branch
-### git reset işlemi
+### reset işlemleri
 - git log --oneline 
     <details>
     commit hash'ini almak için 
@@ -57,6 +57,26 @@
 - git reset --hard commit_hash 
     <details>
     --hard parametresiyle çalıştırırsanız yaptığınız tüm değişiklikleri silerek belirtilen commit'e gidersiniz. zamanda yolculuk yaptırır. kullanması tehlikelidir çünkü yaptığınız önemli bir şey varsa boşa gider. kullanırken DİKKATLİ OLUNUZ. 
+    </details>
+- git reset fileName.txt
+    <details>
+    stage edilen dosyayı unstaged eder. yani "git add fileName.txt" işleminin tam tersini yapar.
+    </details>
+- git reset --hard HEAD
+    <details>
+    yaptığımız tüm değişiklikleri geri alır. örneğin iki tane dosya üzerinde değişiklik yaptık ve bu değişiklikleri geri almak istiyoruz. o zaman bu komutu kullanabiliriz.
+    </details>
+- git restore fileName.txt
+    <details>
+    tüm değişiklikleri geri almak yerine sadece bir dosyadaki değişiklikleri geri almak isteyebiliriz. bunun için "restore" sözcüğünü kullanabilir. "git restore ." kullanarak yine tüm dosyalardaki değişiklikleri geri alabiliriz.
+    </details>
+### farklılıkları görmek
+- git diff fileName.txt
+- git diff commit_hash
+### eski haline dönmek
+- git checkout commit_hash fileName.txt
+    <details>
+    belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirdik. 
     </details>
 ### logları görüntülemek
 - git log --oneline
