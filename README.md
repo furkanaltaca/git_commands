@@ -40,7 +40,20 @@
     büyük D, silmeye zorlar (force). yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolup gider.
     </details>
 ### branch merge işlemi
-- git checkout master && git merge feature_branch
+- git checkout master 
+    <details>
+    önce master branch'ine geçiş yapıyoruz. 
+    </details>
+- git merge feature_branch
+    <details>
+    şimdi ise feature_branch'ini bulunduğumuz branch'a (master) merge ediyoruz. feature_branch'da yapılan tüm değişiklikler master branch'ine gelmiş oldu.
+    </details>
+- git merge --abort
+    <details>
+    merge işlemini iptal etmek için kullanılır. 
+    </details>
+### merge işleminden sonra oluşan conflict
+- oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
 ### reset işlemleri
 - git log --oneline 
     <details>
@@ -70,14 +83,13 @@
     <details>
     tüm değişiklikleri geri almak yerine sadece bir dosyadaki değişiklikleri geri almak isteyebiliriz. bunun için "restore" sözcüğünü kullanabilir. "git restore ." kullanarak yine tüm dosyalardaki değişiklikleri geri alabiliriz.
     </details>
+- git checkout commit_hash fileName.txt
+    <details>
+    belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirebiliriz.
+    </details>
 ### farklılıkları görmek
 - git diff fileName.txt
 - git diff commit_hash
-### eski haline dönmek
-- git checkout commit_hash fileName.txt
-    <details>
-    belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirdik. 
-    </details>
 ### alias ekleme
 - git config --global alias.last 'log -1 HEAD'
     <details>
