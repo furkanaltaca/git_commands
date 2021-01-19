@@ -13,10 +13,11 @@
 ### list changes
 - git status
 - git status -s
-### add to stage
+### un/stage
 - git add .
 - git add fileName.txt
 - git add directory/fileName.txt
+- git restore --staged fileName.txt
 ### commit
 - git commit -m 'do commit process'
 - git commit -m "Burası commit başlığımız" -m "Burası içeriğimizin ilk satırı" -m "Burası içeriğimizin ikinci satırı." -m "Bu da son olsun bari"
@@ -73,7 +74,7 @@
     </details>
 ### conflict
 - oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
-### reset işlemleri
+### reset
 - git log --oneline 
     <details>
     commit hash'ini almak için 
