@@ -60,7 +60,7 @@
     </details>
 - git merge --abort
     <details>
-    merge işlemini iptal etmek için kullanılır. 
+    conflict oluştuğu zaman merge işlemini iptal etmek istersek kullanabiliriz. 
     </details>
 ### conflict
 - oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
