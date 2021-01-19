@@ -62,6 +62,15 @@
     <details>
     conflict oluştuğu zaman merge işlemini iptal etmek istersek kullanabiliriz. 
     </details>
+### rebase
+- git rebase master
+    <details>
+    develop branch'ine geçip master branch'ini rebase uygulamak için kullanılır. 
+    </details>
+- abort rebase
+    <details>
+    öncelikle "git reflog" ile rebase işleminin başlatıldığı kaydı buluyoruz. daha sonra bir önceki kaydın id'sini kopyalıyoruz. "git reset id" işlemini uygulayarak rebase işlemini iptal edilir.
+    </details>
 ### conflict
 - oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
 ### reset işlemleri
@@ -101,6 +110,43 @@
 - git revert commit_hash
     <details>
     belirtilen commit'teki değişiklikleri geri alır ve bu işlemin yağıldığına dair yeni bir commit oluşturulur.
+    </details>
+### stash
+- git stash
+    <details>
+    değişiklik yapılan ancak commit edilmeyen dosyalarımız kaydedilir. başka bir branch'e geçiş yaparken kullanmamız gerekir çünkü git bu değişikliklerin ya commit edilmesini ya da stash ile daha sonra kullanılmak üzere kaydedilmesini ister. biz commit etmeyeceğiz ve başka branch'e geçip daha sonra geri geleceğiz. bu yüzden stash kullanmak durumunda kalırız.
+    </details>
+- git stash push -m "mesajımı buraya yazıyorum"
+    <details>
+    mesaj yazarak stash işlemini uygulayabiliyoruz.
+    </details>
+- git stash list
+    <details>
+    stash uygulanan çalışmalarımızı listeler.
+    </details>
+- git stash apply stash_index
+    <details>
+    stash list ile stash index'ini alıp bu komutu çalıştırırsak kaydettiğimiz çalışmalarımız yeniden aktif hale gelecek.
+    </details>
+- git stash show stash_index
+    <details>
+    stash içerisindeki dosyaların durumunu görebiliriz.
+    </details>
+- git stash branch new-branch stash_index
+    <details>
+    branch oluşturup belirttiğimiz stash'i kullanmak için kullanılır.
+    </details>
+- git stash pop
+    <details>
+    stash işlemi uygulanan çalışmalarımızı geri alır ve stash'den siler. 
+    </details>
+- git stash clear
+    <details>
+    tüm stash'leri temizler.  
+    </details>
+- git stash drop stash_index
+    <details>
+    stash uygulanan çalışmamızı siler. 
     </details>
 ### differents
 - git diff fileName.txt
