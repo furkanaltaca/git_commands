@@ -1,45 +1,55 @@
 # git commands
 
-### projeye git eklemek
+### init
+- cd /project/path
 - git init
-### git configuration ayarları
+### configs
 - git config --global user.name "ad soyad"
 - git config --global user.email "mail@gmail.com"
-### git configuration'ları listeleme
 - git config --list
 - git config --list --global
 - git config user.name
 - git config user.email
-### dosyaların durumuna bakmak
+### list changes
 - git status
 - git status -s
-### dosyayı(ları) git'e eklemek
+### add to stage
 - git add .
 - git add fileName.txt
 - git add directory/fileName.txt
-### commit işlemi
+### commit
 - git commit -m 'do commit process'
 - git commit -m "Burası commit başlığımız" -m "Burası içeriğimizin ilk satırı" -m "Burası içeriğimizin ikinci satırı." -m "Bu da son olsun bari"
-### branch listeleme
+### branch
 - git branch
+    <details>
+    branch'ları listeler
+    </details>
 - git branch --all
-### branch oluşturma
+    <details>
+    remote'daki branchler ile beraber listeler
+    </details>
 - git branch new-branch
-### branch'e geçiş yapmak
-- git checkout new-branch
-### branch oluşturup aynı zamanda o branch'e geçiş yapmak
+    <details>
+    yeni branch oluşturur.
+    </details>
+- git checkout branch_name
+    <details>
+    belirtilen branch'e geçiş yapar.
+    </details>
 - git checkout -b new-branch
-### branch silmek
-- git branch -d silinecek_branch
-- git branch --delete silinecek_branch 
     <details>
-    -d ve --delete aynıdır. merge işlemini yapmadıysanız uyarı alırsınız. merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. bir sonraki işlem bunun için.
+    branch oluşturur ve geçiş yapar.
     </details>
-- git branch -D silinecek_silinecek_branch 
+- git branch -d deleted_branch
     <details>
-    büyük D, silmeye zorlar (force). yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolup gider.
+    branch'i siler.
     </details>
-### branch merge işlemi
+- git branch -D deleted_branch 
+    <details>
+    büyük D, silmeye zorlar (force). merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolur.
+    </details>
+### merge
 - git checkout master 
     <details>
     önce master branch'ine geçiş yapıyoruz. 
@@ -52,7 +62,7 @@
     <details>
     merge işlemini iptal etmek için kullanılır. 
     </details>
-### merge işleminden sonra oluşan conflict
+### conflict
 - oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
 ### reset işlemleri
 - git log --oneline 
@@ -87,15 +97,20 @@
     <details>
     belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirebiliriz.
     </details>
-### farklılıkları görmek
+### revert commit
+- git revert commit_hash
+    <details>
+    belirtilen commit'teki değişiklikleri geri alır ve bu işlemin yağıldığına dair yeni bir commit oluşturulur.
+    </details>
+### differents
 - git diff fileName.txt
 - git diff commit_hash
-### alias ekleme
+### alias
 - git config --global alias.last 'log -1 HEAD'
     <details>
     "git last" komutu bundan sonra "git log -1 HEAD" görevini yerine getirecek. "git last" bize son commitin ayrıntılarını verecektir. 
     </details>
-### logları görüntülemek
+### log
 - git log --oneline
 - git log --author="John"
 - git log --author="John\|Mary"
