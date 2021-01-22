@@ -21,6 +21,10 @@
 ### commit
 - git commit -m 'do commit process'
 - git commit -m "Burası commit başlığımız" -m "Burası içeriğimizin ilk satırı" -m "Burası içeriğimizin ikinci satırı." -m "Bu da son olsun bari"
+- git show commit_hash
+    <details>
+    belirttiğimiz commit_hash'e sahip olan commit'in ayrıntılarını gösterir.
+    </details>
 ### branch
 - git branch
     <details>
@@ -68,7 +72,7 @@
     <details>
     develop branch'ine geçip master branch'ini rebase uygulamak için kullanılır. 
     </details>
-- abort rebase
+- rebase aborting
     <details>
     öncelikle "git reflog" ile rebase işleminin başlatıldığı kaydı buluyoruz. daha sonra bir önceki kaydın id'sini kopyalıyoruz. "git reset id" işlemini uygulayarak rebase işlemini iptal edilir.
     </details>
@@ -149,6 +153,7 @@
     <details>
     stash uygulanan çalışmamızı siler. 
     </details>
+### bisect
 ### differents
 - git diff fileName.txt
 - git diff commit_hash
