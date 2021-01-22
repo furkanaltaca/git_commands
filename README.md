@@ -177,7 +177,19 @@
     stash uygulanan çalışmamızı siler. 
     </details>
 
-### bisect
+### remote
+
+- git remote
+- git remote -v
+- git pull
+- git pull origin master
+- git push origin master
+- git push -u origin master
+- git push --force origin master
+- git push origin --delete feature/register-page
+- git fetch
+- git fetch --all
+- git fetch --all origin
 
 ### differents
 
