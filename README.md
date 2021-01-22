@@ -1,31 +1,42 @@
 # git commands
 
 ### init
+
 - cd /project/path
 - git init
+
 ### configs
+
 - git config --global user.name "ad soyad"
 - git config --global user.email "mail@gmail.com"
 - git config --list
 - git config --list --global
 - git config user.name
 - git config user.email
+
 ### list changes
+
 - git status
 - git status -s
+
 ### un/stage
+
 - git add .
 - git add fileName.txt
 - git add directory/fileName.txt
 - git restore --staged fileName.txt
+
 ### commit
+
 - git commit -m 'do commit process'
 - git commit -m "Burası commit başlığımız" -m "Burası içeriğimizin ilk satırı" -m "Burası içeriğimizin ikinci satırı." -m "Bu da son olsun bari"
 - git show commit_hash
     <details>
     belirttiğimiz commit_hash'e sahip olan commit'in ayrıntılarını gösterir.
     </details>
+
 ### branch
+
 - git branch
     <details>
     branch'ları listeler
@@ -50,12 +61,14 @@
     <details>
     branch'i siler.
     </details>
-- git branch -D deleted_branch 
+- git branch -D deleted_branch
     <details>
     büyük D, silmeye zorlar (force). merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolur.
     </details>
+
 ### merge
-- git checkout master 
+
+- git checkout master
     <details>
     önce master branch'ine geçiş yapıyoruz. 
     </details>
@@ -67,7 +80,9 @@
     <details>
     conflict oluştuğu zaman merge işlemini iptal etmek istersek kullanabiliriz. 
     </details>
+
 ### rebase
+
 - git rebase master
     <details>
     develop branch'ine geçip master branch'ini rebase uygulamak için kullanılır. 
@@ -76,22 +91,26 @@
     <details>
     öncelikle "git reflog" ile rebase işleminin başlatıldığı kaydı buluyoruz. daha sonra bir önceki kaydın id'sini kopyalıyoruz. "git reset id" işlemini uygulayarak rebase işlemini iptal edilir.
     </details>
+
 ### conflict
-- oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir. 
+
+- oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir.
+
 ### reset
-- git log --oneline 
+
+- git log --oneline
     <details>
     commit hash'ini almak için 
     </details>
-- git reset --soft commit_hash 
+- git reset --soft commit_hash
     <details>
     --soft parametresi yaptığınız değişiklikleri korur ve staged halde tutar. commit mesajını yanlış yazdıysanız bu işlemi uyguladıktan sonra commit mesajınızı yeniden yazıp commit edebilirsiniz. 
     </details>
-- git reset --mixed commit_hash 
+- git reset --mixed commit_hash
     <details>
     --mixed parametresi ile yaptığımız commit'i geri alırız ve yaptığımız değişiklikler staged edilmemiş olarak gelir. yani "git add file_name.txt" komutuyla staged edip commit etmemiz gerekir.
-    </details> 
-- git reset --hard commit_hash 
+    </details>
+- git reset --hard commit_hash
     <details>
     --hard parametresiyle çalıştırırsanız yaptığınız tüm değişiklikleri silerek belirtilen commit'e gidersiniz. zamanda yolculuk yaptırır. kullanması tehlikelidir çünkü yaptığınız önemli bir şey varsa boşa gider. kullanırken DİKKATLİ OLUNUZ. 
     </details>
@@ -111,12 +130,16 @@
     <details>
     belirttiğimiz commit'teki dosyayı alıp şimdiki haliyle değiştirebiliriz.
     </details>
+
 ### revert commit
+
 - git revert commit_hash
     <details>
     belirtilen commit'teki değişiklikleri geri alır ve bu işlemin yağıldığına dair yeni bir commit oluşturulur.
     </details>
+
 ### stash
+
 - git stash
     <details>
     değişiklik yapılan ancak commit edilmeyen dosyalarımız kaydedilir. başka bir branch'e geçiş yaparken kullanmamız gerekir çünkü git bu değişikliklerin ya commit edilmesini ya da stash ile daha sonra kullanılmak üzere kaydedilmesini ister. biz commit etmeyeceğiz ve başka branch'e geçip daha sonra geri geleceğiz. bu yüzden stash kullanmak durumunda kalırız.
@@ -153,16 +176,23 @@
     <details>
     stash uygulanan çalışmamızı siler. 
     </details>
+
 ### bisect
+
 ### differents
+
 - git diff fileName.txt
 - git diff commit_hash
+
 ### alias
+
 - git config --global alias.last 'log -1 HEAD'
     <details>
     "git last" komutu bundan sonra "git log -1 HEAD" görevini yerine getirecek. "git last" bize son commitin ayrıntılarını verecektir. 
     </details>
+
 ### log
+
 - git log --oneline
 - git log --author="John"
 - git log --author="John\|Mary"
