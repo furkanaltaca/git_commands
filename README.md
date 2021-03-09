@@ -57,6 +57,10 @@
     <details>
     branch oluşturur ve geçiş yapar.
     </details>
+- git checkout -t remote_branch_name
+    <details>
+    büyük D, silmeye zorlar (force). merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolur.
+    </details>
 - git branch -d deleted_branch
     <details>
     branch'i siler.
