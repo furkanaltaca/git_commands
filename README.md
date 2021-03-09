@@ -59,7 +59,7 @@
     </details>
 - git checkout -t remote_branch_name
     <details>
-    büyük D, silmeye zorlar (force). merge yapmadan silmek istiyorsanız force işlemi uygulamalısınız. yani yazdığınız kodları merge edip etmemenizi umursamaz. yazdıklarınız kaybolur.
+    remote'da oluşturulan branch'i pull ile local repoya aldıktan sonra üzerinde işlem yapabilmek için remote branch'in ismiyle aynı olan bir branch oluşturur ve yapılan işlemleri pull ettiğimizde remote'daki branch'i günceller
     </details>
 - git branch -d deleted_branch
     <details>
