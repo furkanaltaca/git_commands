@@ -203,6 +203,7 @@
 ### alias
 
 - git config --global alias.last 'log -1 HEAD'
+- git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
     <details>
     "git last" komutu bundan sonra "git log -1 HEAD" görevini yerine getirecek. "git last" bize son commitin ayrıntılarını verecektir. 
     </details>
@@ -222,3 +223,4 @@
 - git log --after="yesterday"
 - git log --after="2014-7-1" --before="2014-7-4"
 - git log -- foo.py bar.py
+- git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
