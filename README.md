@@ -98,7 +98,7 @@
 
 ### conflict
 
-- oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanmak işleri daha da kolaylaştırabilir.
+- oluşan conflict'leri çözmek için "sourcetree" veya "vscode" kullanabiliriz.
 
 ### reset
 
