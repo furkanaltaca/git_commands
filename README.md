@@ -142,6 +142,14 @@
     belirtilen commit'teki değişiklikleri geri alır ve bu işlemin yağıldığına dair yeni bir commit oluşturulur.
     </details>
 
+### tag
+- git tag --list
+- git tag tag_name
+- git tag tag_name commit_hash
+- git tag tag_name -m 'tag message'
+- git show tag_name
+- git tag --delete tag_name
+
 ### stash
 
 - git stash
