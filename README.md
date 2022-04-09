@@ -149,6 +149,8 @@
 - git tag tag_name -m 'tag message'
 - git show tag_name
 - git tag --delete tag_name
+- git push origin --tags
+- git push origin tag_name
 
 ### stash
 
